@@ -1,0 +1,30 @@
+body{
+    background-image: url(./image0.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 700;
+    font-weight: 500;
+    background-color:rgb(243, 156, 196);
+    color:black;
+    margin: 0%;
+    text-shadow: 2px 2px 2px greenyellow;
+}
+h3{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform:none
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(243, 103, 78);
+}
+a:active{
+    color: yellow;
+}
