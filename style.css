@@ -1,0 +1,51 @@
+div {
+    text-align: center;
+    line-height: 0%;
+    margin-top: 5%;
+}
+
+p {
+    font-size: large;
+}
+
+h1 {
+    text-shadow: 5px 3% green;
+}
+
+h6 {
+    font-size: medium;
+}
+
+li {
+    display: inline;
+    padding: 1.5%;
+}
+
+ul {
+    text-align: center;
+    background-color: rgb(94, 92, 92);
+    color: white;
+    width: 700px;
+    height: 20px;
+    margin: auto;
+}
+
+li:hover {
+    color: rgb(252, 74, 74);
+}
+
+.damo1 {
+    border: 1% red;
+    margin-top: 2%;
+}
+
+.damo2 {
+    width: 70%;
+    margin: auto;
+    margin-top: 1.5%;
+    padding: 1%;
+    text-align: justify;
+    border: 2px solid black;
+    max-height: 150px;
+    overflow: scroll;
+}
