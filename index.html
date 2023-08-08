@@ -3,106 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web lyout</title>
 </head>
 <style>
-    body {
-        background-color: rgb(230, 238, 247);
+    header {
+        border: 1px solid black;
+        width: 100%;
+        height: 30px;
+        position: sticky;
+        top: 5px;
+        background-color: rgb(179, 175, 175);
+
     }
 
-    h2 {
-        color: blue;
+    * {
+        color: white;
+        font-size: large;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    nav {
+        border: 1px solid black;
+        width: 100%;
+        height: 30px;
+        background-color: rgb(179, 175, 175);
+    }
+
+    aside {
+        border: 1px solid black;
+        width: 20.4%;
+        height: 600px;
+        float: left;
+        margin-top: 5px;
+        background-color: rgb(145, 145, 231);
+        padding-top: 50px;
+
+    }
+
+    main {
+        border: 1px solid black;
+        width: 58.5%;
+        height: 600px;
+        float: left;
+        margin-top: 5px;
+        background-color: rgba(185, 185, 233, 0.884);
     }
 
     div {
-        width: 25%;
-        height: 20%;
-        position: absolute;
-        left: 12%;
-        top: 20%;
-        padding-top: 2%;
-
-    }
-
-    header {
-        border: 1px solid rgb(165, 155, 155);
-        width: 250px;
-        height: 250px;
-        margin: 10% auto;
-        text-align: center;
-        padding-top: 10px;
-        background-color: white;
-        box-shadow: 3px 3px rgb(162, 163, 162);
-
-    }
-
-    #damo1 {
         border: 1px solid black;
-        width: 240px;
-        height: 25px;
-        margin: 5% auto;
-        background-color: blue;
-        color: white;
-        font-weight: 700;
-    }
-
-    #damo1:hover {
-        color: red;
-    }
-
-    #damo:hover {
-        color: red;
-    }
-
-    #damo {
-        background-color: green;
-        color: white;
-        width: 180px;
-        height: 25px;
-        font-weight: 700;
-    }
-
-    a {
-        text-decoration: none;
+        width: 20.4%;
+        height: 600px;
+        float: left;
+        margin-top: 5px;
+        background-color: rgb(145, 145, 231);
 
     }
 
-    a:hover {
-        text-decoration: underline;
-    }
-
-    #main2 {
+    footer {
         border: 1px solid black;
-        width: 225px;
-        padding: 5px;
-        margin: auto;
-    }
-
-
-    input {
-        width: 225px;
-        padding: 5px;
-        border: ;
-    }
-
-    input:hover {
-        background-color: rgb(73, 201, 233);
+        width: 100%;
+        height: 30px;
+        clear: both;
+        position: fixed;
+        bottom: 2px;
+        background-color: rgb(77, 77, 250);
     }
 </style>
 
 <body>
-    <div>
-        <h2>facebook</h2>
-        <p>Connect with and the world arond you on Facebook.</p>
-    </div>
-
-    <header>
-        <input class="damp1" type="text" placeholder="Email or phone number"><br><br>
-        <input class="damo2" type="text" placeholder="Password"><br><br>
-        <button id="damo1">Login</button>
-        <a href="Forgot password?">Forgot password?</a><br><br><br>
-        <button id="damo">Forgot Password</button>
-    </header>
+    <header>Header</header>
+    <nav>Navigation Menu</nav>
+    <aside>Aside</aside>
+    <main>Main Content</main>
+    <div>Content</div>
+    <footer>Footer</footer>
 </body>
 
 </html>
