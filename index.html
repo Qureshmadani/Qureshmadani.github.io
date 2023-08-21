@@ -2,65 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form assignment</title>
+    <title>navbaar</title>
     <style>
-        body {
-            background: url(formimage.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+        * {
+            padding: 0%;
+            margin: 0%;
+            color: white;
+            font-weight: 600;
         }
 
-        #main {
-            border: 1px solid rgb(167, 38, 38);
-            width: 25%;
-            padding: 30px;
-            margin: auto;
-            background-color: rgba(126, 204, 126, 0.37);
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 30px;
+            background-color: black;
+            margin-top: 5px;
+
         }
 
-        input:hover {
-            border: solid rgb(235, 63, 86);
+        li {
+            display: inline;
+            padding: 10px;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        .box1 {
+            margin-top: 10%;
+        }
+
+        .box3 {
+            margin-right: 500px;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: rgb(65, 192, 192);
         }
 
         button:hover {
-            color: red;
+            background-color: rgb(153, 153, 248);
         }
 
-        h3 {
-            text-align: center;
-            word-spacing: 8px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: black;
-            font-size: xx-large;
+        .main {
+            margin-top: 10%;
+        }
+
+        .ulbox {
+            padding-left: 500px;
+        }
+
+        a:hover {
+            color: rgb(250, 47, 47);
         }
     </style>
 </head>
 
 <body>
-    <h3>Register Here</h3>
-    <div id="main">
-        <label>First Name</label><br>
-        <input type="text"><br><br>
-        <label>Last Name</label><br>
-        <input type="text"><br><br>
-        <label>Email</label><br>
-        <input type="email"><br><br>
-        <label>Password</label><br>
-        <input type="password"><br><br>
-        <label>Gender:</label>
-        <input type="radio" name="gender">Male
-        <input type="radio" name="gender">Female<br><br>
-        <label>Select Country</label><br>
-        <select name="country" id="country">
-            <option value="Pakistan">Pakistan</option>
-            <option value="chaina">chaina</option>
-            <option value="india">india</option>
-            <option value="usa"></option>
-        </select><br><br>
-        <button>Login</button><br>
-    </div>
+    <header>
+        <div>
+            <h5>LOGOBAKERY</h5>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Services</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        <BUtton>Contact</BUtton>
+    </header>
+    <header class="box1">
+
+        <nav>
+            <ul class="box2">
+                <li><a href="">Services</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        <BUtton class="box3">Contact</BUtton>
+        <div>
+            <h5>LOGOBAKERY</h5>
+        </div>
+    </header>
+    <header class="main">
+        <div>
+            <h5>LOGOBAKERY</h5>
+        </div>
+        <nav>
+            <ul class="ulbox">
+                <li><a href="">Services</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        <BUtton>Contact</BUtton>
+    </header>
 </body>
 
 </html>
