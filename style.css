@@ -1,51 +1,138 @@
-div {
+body {
+    /* background-color: rgb(110, 90, 98); */
+    margin-top: 0%;
+}
+
+.hader {
+    background-color: rgb(63, 163, 245);
     text-align: center;
-    line-height: 0%;
-    margin-top: 5%;
+    border: 2px solid rgb(53, 53, 53);
+    width: 100%;
+    position: sticky;
+    top: 0%;
+
 }
 
-p {
-    font-size: large;
-}
-
-h1 {
-    text-shadow: 5px 3% green;
-}
-
-h6 {
-    font-size: medium;
-}
 
 li {
     display: inline;
-    padding: 1.5%;
+    padding: 10px;
+    font-size: large;
 }
 
-ul {
-    text-align: center;
-    background-color: rgb(94, 92, 92);
+a {
     color: white;
-    width: 700px;
-    height: 20px;
-    margin: auto;
+    text-decoration: none;
 }
 
-li:hover {
-    color: rgb(252, 74, 74);
+a:hover {
+    color: red;
+    font-weight: 100px;
 }
 
-.damo1 {
-    border: 1% red;
-    margin-top: 2%;
+main {
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+    background-image: url(./imagez/laybrari11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2px;
 }
 
-.damo2 {
-    width: 70%;
-    margin: auto;
-    margin-top: 1.5%;
-    padding: 1%;
-    text-align: justify;
-    border: 2px solid black;
-    max-height: 150px;
-    overflow: scroll;
+aside {
+    width: 100%;
+    height: 225px;
+    background-color: rgba(171, 83, 253, 0.884);
+
+}
+
+.box {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    border: 1px solid rgb(219, 37, 37);
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40%;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+}
+
+.footer {
+    background-color: rgb(68, 54, 59);
+    width: 50%;
+    height: 238px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+
+
+}
+
+h3 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+
+    margin-left: auto;
+    width: 100px;
+    margin-top: 15px;
+    background-color: rgb(122, 70, 89);
+
+
+}
+
+input:hover {
+    background-color: rgb(108, 108, 255);
+    transition: 0.5s;
+}
+
+.footer2 {
+    background-color: rgb(18, 91, 94);
+    width: 50%;
+    height: 238px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+
+img {
+    margin: 10px;
+}
+
+.at:hover {
+    color: blue;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.im {
+    position: absolute;
+    display: block;
+    padding-left: 10%;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    margin-right: 10%;
+}
+
+nav {
+    display: flex;
+}
+
+.butt {
+    align-items: center;
 }
