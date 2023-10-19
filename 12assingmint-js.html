@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript assingmint-12</title>
+    <style>
+      .ab {
+        background-color: rgba(68, 226, 134, 0.856);
+      }
+      h2 {
+        color: rgb(116, 124, 240)0)0);
+      }
+      .h3 {
+        color: rgb(68, 49, 240);
+      }
+      h3 {
+        font-size: larger;
+        font-weight: 800;
+      }
+      #x {
+        color: green;
+      }
+      .xy {
+        background-color: rgb(243, 127, 107);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="ab">Assingmint 11 foor javascript</h1>
+    <h2 id="x">if...else and else if statements & if statements nested</h2>
+    <h2>Testing sets of conditions</h2>
+    <h3 class="h3">Muhammad Quresh madani</h3>
+    <br />
+    <h1 class="xy">Food purchasing application</h1>
+
+    <!-- javascript  -->
+
+    <script>
+      var s = 500;
+      var m = 750;
+      var l = 900;
+      var sm = 150;
+      var md = 200;
+      var sma = 100;
+      var mda = 130;
+
+      var food = prompt("Enter your food foor Exp,Pizza, Biryani, burger,");
+
+      if (food === "pizza") {
+        alert(food);
+        var flavoure = prompt("Enter your Flavoure chiken,beef,bbq,Egg");
+        if (flavoure === "chiken" || "beef" || "bbq" || "Egg") {
+          alert(flavoure);
+          var size = prompt("Enter your size for Exp s , m , l");
+          if (size === "s") {
+            var qt = prompt("Enter your Contete For Exp 1,2,3,4,5");
+            alert(qt * s);
+            document.write(
+              "<h3> Total Amount " + qt * s + " Just wait ten minutes </h3> "
+            );
+          } else if (size === "m") {
+            var qt = prompt("Enter your Contete For Exp 1,2,3,4,5");
+            alert(qt * m);
+            document.write(
+              "<h3> Total Amount " + qt * m + " Just wait ten minutes </h3> "
+            );
+          } else if (size === "l") {
+            var qt = prompt("Enter your Contete For Exp 1,2,3,4,5");
+            alert(qt * l);
+            document.write(
+              "<h3> Total Amount " + qt * l + " Just wait ten minutes </h3> "
+            );
+          }
+        }
+      } else if (food === "Biryani") {
+        var flavour = prompt("Enter your Flavoure chiken,beef,vagitebl");
+        if (flavour === "chicken" || "beef" || "vagitebl") {
+          alert(flavour);
+          var siz = prompt("Enter your size for Exp sm , md ");
+          if (siz === "sm") {
+            var qty = prompt("Enter your Contete For Exp 1,2,3");
+            alert(qty * sm);
+            document.write(
+              "<h3> Total Amount " + qty * sm + " Just wait ten minutes </h3> "
+            );
+          } else if (siz === "md") {
+            var qty = prompt("Enter your Contete For Exp 1,2,3");
+            alert(qty * md);
+            document.write(
+              "<h3> Total Amount " + qty * md + " Just wait ten minutes </h3> "
+            );
+          }
+        }
+      } else if (food === "Burger") {
+        var flavour = prompt("Enter your Flavoure chiken,beef,Egg");
+        if (flavour === "chicken" || "beef" || "egg") {
+          alert(flavour);
+          var siz = prompt("Enter your size for Exp sma , mda ");
+          if (siz === "sma") {
+            var qty = prompt("Enter your Contete For Exp 1,2,3");
+            alert(qty * sma);
+            document.write(
+              "<h3> Total Amount " + qty * sma + " Just wait ten minutes </h3> "
+            );
+          } else if (siz === "mda") {
+            var qty = prompt("Enter your Contete For Exp 1,2,3");
+            alert(qty * mda);
+            document.write(
+              "<h3> Total Amount " + qty * mda + " Just wait ten minutes </h3> "
+            );
+          }
+        }
+      } else {
+        alert("Not avalibel");
+      }
+    </script>
+  </body>
+</html>
