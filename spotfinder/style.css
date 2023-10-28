@@ -1,0 +1,18 @@
+#linkan:hover{
+color: red;
+}
+#log:hover{
+    color: red;
+
+}
+#grl{
+    margin-left:auto;
+}
+.buu{
+    margin-left: 120px;
+    width: 40%;
+    background-color: rgb(252, 18, 18);
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 50px;
+}
