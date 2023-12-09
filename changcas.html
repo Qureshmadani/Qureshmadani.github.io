@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>farsst later uppercaas</title>
+</head>
+<style>
+    h1 {
+        color: brown;
+    }
+</style>
+
+<body>
+    <h1>chaging case uppurcase & lowercase & capitelcase</h1>
+    <script>
+
+        var textup = "my name is muhammad quresh madani jamiat ulmadina fazane qutbe madina"
+        for (var i = 0; i < textup.length; i++) {
+
+            var farstCr = textup[i, 0].toUpperCase() + textup.slice(1)
+        }
+
+        document.write(farstCr)
+        document.write("<br>")
+        document.write("<br>")
+
+        var textup = "my name is muhammad quresh madani jamiat ulmadina fazane qutbe madina"
+        var farstCr = textup[0].toLowerCase() + textup.slice(1)
+
+        document.write(textup)
+        document.write("<br>")
+        document.write("<br>")
+
+
+
+        var text = "my name is muhammad quresh madani jamiat ulmadina fazane qutbe madina"
+
+        var chang = text.split(" ")
+        var arr = []
+        for (var i = 0; i < chang.length; i++) {
+            var upper = chang[i][0].toUpperCase() + chang[i].slice(1)
+            arr.push(upper)
+            var j = arr.join("  ")
+
+        }
+        document.write(j);
+
+    </script>
+
+
+</body>
+
+</html>
