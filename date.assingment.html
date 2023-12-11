@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE METHODS</title>
+    <style>
+        h3 {
+            color: rgb(6, 6, 205);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.write("<h3> Q 1 : displays current date and time </h3>");
+        var date = new Date()
+        document.write(date)
+
+
+        document.write("<h3> Q 2 : alerts the current month in words. </h3>");
+        var monthName = ['January', 'February', 'March', 'April', 'May', 'Jun', 'July', 'August', 'September', 'October', 'November', 'December']
+        var mon = new Date()
+        var mone = monthName[mon.getMonth()]
+        document.write(mone)
+
+
+        document.write("<h3> Q 3 : alerts the first 3 letters of the current day </h3>");
+        var dayName = ['Sun', 'Mon', 'Tue', 'wed', 'Thu', 'Fri', 'sat']
+        var day = new Date()
+        var days = dayName[day.getDay()]
+        document.write(days)
+
+
+        document.write("<h3> Q 4 : displays a message “It’s Fun day” if its Saturday or Sunday today. </h3>");
+        var dayName = ['Sun', 'Mon', 'Tue', 'wed', 'Thu', 'Fri', 'sat']
+        var day = new Date()
+        var days = dayName[day.getDay()]
+        if (days == "sun" || "Mon") {
+            document.write("“It’s Fun day”")
+        } else {
+            document.write("No fun day")
+        }
+
+        document.write("<h3> Q 5 : that determines the minutes since midnight, Jan. 1, 1970</h3>")
+        var crntDate = new Date()
+        document.write("Current Date:" + crntDate)
+        var miliscind = (crntDate / 1000)
+        document.write("<br>")
+        document.write("Elapsed milliseconds since" + miliscind)
+        var mints = (crntDate / 1000 * 60)
+        document.write("<br>")
+        document.write("Elapsed mints since" + mints)
+
+        document.write("<h3> Q 6 : tests whether it's before noon and alert “Its AM” else “its PM”. </h3>")
+        var Tim = new Date()
+        document.write(Tim)
+        if (Tim > 23) {
+            document.write("AM")
+        } else {
+            document.write("PM")
+        }
+
+        document.write("<h3> Q 7 : that shows the message “First fifteen days of the month” if the date is less than 16th of the month else shows “Last days of the month”. </h3>");
+        var day = new Date()
+        var das = day.getMonth()
+        if (das <= 15) {
+            document.write("“First fifteen days of the month”")
+        } else {
+            document.write(" “Last days of the month”.")
+        }
+
+        document.write("<h3> Q 8 : Write a program to ask the user about his age. Calculate and show his birth year in your browser.</h3>")
+        var brthdy = new Date(prompt("Enter your birth date"))
+        var today = new Date()
+        var agy = today - brthdy
+        document.write("Your agy is" + " : " + Math.floor(agy / (1000 * 3600 * 24) / 365.25))
+        document.write("<br>")
+        document.write("Your totel days is" + " : " + Math.floor(agy / (1000 * 3600 * 24)))
+
+        document.write("<h3> Q 9 : Write a program to generate your K-Electric bill in your browser. </h3>")
+        document.write("<h1> K-Electric bill </h1>")
+        var yourName = prompt("Enter Customer Name", "Muhammad Quresh")
+        document.write("Customer Name" + " : " + yourName)
+        var monthName = ['January', 'February', 'March', 'April', 'May', 'Jun', 'July', 'August', 'September', 'October', 'November', 'December']
+        var mon = new Date()
+        var mone = monthName[mon.getMonth()]
+        document.write("<br>")
+        document.write("Current Month" + " : " + mone)
+        var numunit = +prompt("Enter Number of units")
+        document.write("<br>")
+        document.write("Number of units" + " : " + numunit)
+        var num = numunit.pars
+        var price = 16;
+        document.write("<br>")
+        document.write("Number of units" + " : " + price)
+        var sum = numunit * price
+        document.write("<br>" + "<br>")
+        document.write("Net Amount Payable (within Due Date)" + " : " + sum)
+        var late = 350;
+        var sumlate = sum + late
+        document.write("<br>")
+        document.write("Late Payment Surcharge" + " : " + late)
+        document.write("<br>")
+        document.write("Gross Amount Payable (after Due Date)" + " : " + sumlate)
+
+
+
+
+    </script>
+</body>
+
+</html>
