@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show moer</title>
+
+    <style>
+        h1 {
+            color: brown;
+            text-align: center;
+        }
+
+        #btn {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Read moer &Read less</h1>
+
+    <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit cumque nam porro laborum saepe impedit
+
+        rem ab
+        vel possimus. Provident doloremque quo ipsa, dolores fugiat adipisci molestias natus temporibus voluptate
+        nesciunt nulla cupiditate, voluptatibus dolorem officiis ab. Facilis tempore ut adipisci vitae corrupti unde,
+        sint natus beatae molestias dolores veritatis Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+        eaque minus ipsam quae, velit tenetur sapiente ea nam repellendus ut ab fugit vero commodi esse voluptates modi
+        ipsa itaque molestiae.<span id="dote"></span> <span id="disnone" style="display: none;">Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Molestias temporibus ad adipisci optio eum expedita necessitatibus
+            rerum provident architecto non, laboriosam corrupti praesentium omnis nisi minus illo quas assumenda eos, id
+            natus sunt corporis hic nam. Error fuga maiores officiis sed vel nihil deserunt! Odit, sunt optio.
+            Doloremque, laborum commodi.</span> <span id="btn" onclick="showclik()">read more</span></p>
+
+
+    <script>
+        function showclik() {
+            var dote = document.getElementById('dote');
+            var disnone = document.getElementById('disnone');
+            var btn = document.getElementById('btn');
+
+            if (dote.style.display != 'none') {
+                dote.style.display = 'none';
+                disnone.style.display = 'inline';
+                btn.innerHTML = 'read less';
+
+            } else {
+                dote.style.display = 'inline';
+                disnone.style.display = 'none';
+                btn.innerHTML = 'read more';
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
