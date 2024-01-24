@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindText in javascript</title>
+
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        #main {
+            display: grid;
+            text-align: center;
+        }
+
+        #item {
+            background-color: aquamarine;
+            border: solid black;
+            height: 300px;
+            box-shadow: 5px 3px 3px rgba(255, 0, 0, 0.741);
+        }
+
+        input:hover {
+            border-color: red;
+        }
+
+        label {
+            font-size: large;
+        }
+
+        button {
+            background-color: tomato;
+            width: 70px;
+            border-radius: 5px;
+            color: aliceblue;
+        }
+
+        button:hover {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="item">
+            <h1> Finding Text in javascript</h1>
+            <div id="ab">
+                <label for="inp">Find Text :</label>
+                <input type="text" id="inp">
+                <button onclick="find()">Serch</button>
+            </div>
+            <div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, eaque. Delectus qui error
+                    laudantium culpa magni. Laborum, quis accusantium consequuntur voluptates porro ducimus hic est?
+                    Aliquam consequatur voluptatem voluptas nam! Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Itaque, voluptatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas nisi
+                    dolore maxime, repellendus vitae officia esse id sint numquam delectus architecto alias asperiores
+                    provident soluta quasi sapiente beatae expedita cum porro necessitatibus quod. Corporis, saepe
+                    perspiciatis? Rerum pariatur architecto, ut a cumque nulla omnis quaerat quisquam id tempore
+                    eligendi numquam impedit dolorem magni veniam velit quos aliquam, dignissimos vero. Aliquam error
+                    eum voluptatum animi laborum odit fugiat consectetur sunt dolore, cupiditate eligendi inventore quam
+                    sed odio molestiae ad facilis consequatur, quisquam perspiciatis accusantium excepturi quia. Non
+                    nesciunt, vitae autem labore minima inventore excepturi velit! Libero praesentium culpa ad veniam
+                    sed.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function find() {
+            var para = document.getElementById('para')
+            var chang = para.innerText.toLowerCase()
+            var inputtext = document.getElementById('inp').value.toLowerCase()
+            para.innerHTML = (chang.replaceAll(inputtext, `<mark> ${inputtext}</mark>`))
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
