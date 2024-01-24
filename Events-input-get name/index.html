@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Js</title>
+    <style>
+        h1 {
+            background-color: rgb(245, 98, 98);
+        }
+
+        fieldset {
+            background-color: rgb(162, 138, 248);
+            box-shadow: 5px 5px 2px red;
+        }
+
+        .in {
+            margin-left: 12px;
+        }
+
+        .btn {
+            width: 80px;
+            font-size: large;
+            background-color: tomato;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Events Assingmint on get input value</h1>
+    <fieldset>
+        <label>Usr Name:</label>
+        <input class="in" type="text" id="usrinput1"><br><br>
+        <label>Fader Name:</label>
+        <input type="text" id="usrinput2"><br><br>
+        <label>Email adres:</label>
+        <input type="email" id="usrinput3"><br><br>
+        <label>web app id:</label>
+        <input class="in" type="password" id="usrinput4"><br><br>
+        <input class="btn" type="submit" value="submit" onclick="foo()">
+    </fieldset>
+
+    <script>
+        function foo() {
+            var inputname1 = document.getElementById("usrinput1").value
+            var inputname2 = document.getElementById("usrinput2").value
+            var inputname3 = document.getElementById("usrinput3").value
+            var inputname4 = document.getElementById("usrinput4").value
+            // condision
+            if (inputname1.trim() == "") {
+                alert('plz enter yuor value')
+            } else {
+
+                document.write('anser' + inputname1 + '<br>' + inputname2 + '<br>' + inputname3 + '<br>' + inputname4.trim())
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
