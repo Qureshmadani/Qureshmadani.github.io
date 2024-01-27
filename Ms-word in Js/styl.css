@@ -1,0 +1,88 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+#contener {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background-color: rgb(246, 241, 241);
+}
+#heder ul li {
+  padding-left: 20px;
+  display: inline;
+}
+li {
+  display: inline;
+  color: rgb(15, 14, 14);
+}
+#cerch-baar {
+  margin: 0px auto;
+}
+input {
+  width: 300px;
+  height: 25px;
+  padding-left: 5px;
+}
+#sine {
+  background-color: black;
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  margin-right: 20px;
+}
+#navbaar {
+  background-color: rgb(246, 241, 241);
+}
+#navbaar ul li a {
+  color: black;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+#navbaar a:hover {
+  text-decoration: underline;
+}
+#navbaar ul {
+  padding-top: 3px;
+  align-items: center;
+}
+#sacint-nav {
+  height: 40px;
+  display: flex;
+  border-bottom: 1px solid rgb(124, 122, 122);
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 25px;
+  margin-left: 15px;
+  background-color: white;
+  border: 0cap;
+}
+#text {
+  margin-left: 20%;
+  padding-top: 10px;
+  margin-top: 3px;
+}
+#btn4 {
+  text-decoration: line-through;
+}
+
+.uppercas {
+  text-transform: uppercase;
+}
+.atalic {
+  font-style: italic;
+}
+.underlain {
+  text-decoration-line: underline;
+}
+.lainthro {
+  text-decoration: line-through;
+}
+.btn-color {
+  background-color: rgb(226, 221, 221);
+  border: solid rgb(183, 180, 180);
+  border-radius: 5px;
+}
