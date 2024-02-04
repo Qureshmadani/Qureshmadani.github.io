@@ -46,3 +46,16 @@ function raitalin() {
   var text = (document.getElementById("text").style.textAlign = "end");
   btn8.className = "btn-color";
 }
+
+var textbox = document.getElementById("text");
+textbox.addEventListener("input", function () {
+  var text = this.value;
+  var char = text.length;
+  document.getElementById("char").innerHTML = char;
+
+  var word = text.split(" ");
+  var clainlist = word.filter(function (elm) {
+    return elm != "";
+  });
+  document.getElementById("word").innerHTML = clainlist.length;
+});
