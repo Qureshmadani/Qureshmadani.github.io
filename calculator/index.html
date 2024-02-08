@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        body {
+            width: 150;
+            height: 100vh;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(102, 73, 230, 0.657);
+        }
+
+        #calculator {
+            padding: 10px;
+            border: solid 3px rgb(80, 77, 77);
+            box-shadow: 2px 2px 5px red;
+            background-color: rgb(0, 0, 0, 0, 5);
+            border-radius: 5px;
+        }
+
+        input {
+            width: 235px;
+            height: 35px;
+            padding: 20px;
+            margin: 10px;
+            background-color: rgba(232, 220, 220, 0.4);
+            font-size: 35px;
+            color: white;
+            text-align: right;
+            border-radius: 10px;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        button {
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            color: black;
+            background-color: white;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 2px;
+            border: solid 1px rgba(255, 255, 255, 255, 0.2);
+            border-radius: 25px;
+            text-shadow: 0px 1px 5px rgba(0, 0, 0, 0, 0.2);
+            box-shadow: 2px 5px 20px rgba(0, 0, 0, 0, 0.9);
+        }
+
+        .ac,
+        .del {
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: rgb(238, 109, 86);
+        }
+
+        .equalBt {
+            background-color: rgb(66, 239, 66);
+        }
+
+        .oprater {
+            color: rgb(30, 233, 30);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="calculator">
+        <input type="text" id="inputBox" placeholder="0">
+        <div>
+            <button class="oprater ac">AC</button>
+            <button class="oprater del">DEL</button>
+            <button class="oprater">%</button>
+            <button class="oprater">/</button>
+        </div>
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="oprater">*</button>
+        </div>
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="oprater">-</button>
+        </div>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="oprater">+</button>
+        </div>
+        <div>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equalBt">=</button>
+        </div>
+    </div>
+
+    <!-- istart javascript  -->
+    <script>
+        var display = document.getElementById('inputBox');
+        var buttons = document.querySelectorAll('button');
+
+        var buttonsArray = Array.from(buttons);
+
+        var string = '';
+
+        buttonsArray.forEach(btn => {
+
+            btn.addEventListener('click', (e) => {
+                if (e.target.innerHTML == 'DEL') {
+                    string = string.substring(0, string.length - 1);
+                    display.value = string;
+                } else if (e.target.innerHTML == 'AC') {
+                    string = '';
+                    display.value = string;
+                } else if (e.target.innerHTML == '=') {
+                    string = eval(string);
+                    display.value = string;
+                } else {
+                    string += e.target.innerHTML;
+                    display.value = string;
+                }
+            })
+
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
