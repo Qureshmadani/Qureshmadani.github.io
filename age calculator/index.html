@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age calculator</title>
+    <style>
+        h1 {
+            text-shadow: 2px 1px 2px red;
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10%;
+
+        }
+
+        body {
+            background-color: rgba(62, 201, 248, 0.754);
+        }
+
+        #calculator {
+            width: 250px;
+            height: 60vh;
+            border: 2px solid black;
+            box-shadow: 1px 2px 4px greenyellow;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+        }
+
+        input:hover {
+            border: 2px solid tomato;
+        }
+
+        button {
+            background-color: rgb(85, 85, 242);
+            border-radius: 5px;
+            color: white;
+            font-family: sans-serif;
+            width: 208px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+
+        button:hover {
+            box-shadow: 2px 2px 5px tomato;
+            color: red;
+
+        }
+
+        h2 {
+            text-align: start;
+            margin-left: 20px;
+            text-shadow: 1px 1px 1px yellow;
+        }
+
+        h3 {
+            text-align: start;
+            margin-left: 40px;
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="calculator">
+            <h1>Age calculator</h1>
+            <input type="text" id="inputbox" placeholder="Enter age 08/02/1992">
+            <div>
+                <button id="btn" onclick="foo()">Searching</button>
+            </div>
+            <div>
+                <h2>Output</h2>
+                <h3>Totel year :<span id="h1"></span> </h3>
+                <h3>Totel days :<span id="h2"></span></h3>
+            </div>
+        </div>
+    </div>
+    <!-- istart javascript  -->
+    <script>
+        var inputbox = document.getElementById('inputbox');
+        var btn = document.getElementById('btn')
+        function foo() {
+            var brthdy = new Date(inputbox.value)
+            var today = new Date()
+            var agy = today - brthdy
+            var age1 = Math.floor(agy / (1000 * 3600 * 24) / 365.25)
+            var daz = Math.floor(agy / (1000 * 3600 * 24))
+
+            document.getElementById('h1').innerHTML = age1
+            document.getElementById('h2').innerHTML = daz
+        }
+    </script>
+</body>
+
+</html>
