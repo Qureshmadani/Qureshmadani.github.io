@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(174, 171, 171);
+        }
+
+        #clock {
+            border: 1.5px solid rgb(60, 58, 58);
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 3px 20px blue;
+
+        }
+
+        #clock {
+            background-color: rgb(99, 99, 242);
+            width: 200px;
+            height: 80px;
+            margin-top: 100px;
+        }
+
+        #asaid {
+            font-size: 50px;
+            font-weight: bold;
+            padding-right: 10px;
+            color: rgb(245, 78, 78);
+            text-shadow: 2px 2px 5px black;
+        }
+
+        #bsaid {
+            font-size: 33px;
+            padding-right: 8px;
+            padding-top: 5px;
+            font-weight: bold;
+            color: red;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        #csaid {
+            font-size: 25px;
+            font-weight: bold;
+            padding-top: 8px;
+            color: greenyellow;
+            text-shadow: 1px 1px 4px black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="clock">
+        <div id="asaid">
+            <span id="hors">00</span>
+        </div>
+        <div id="bsaid">
+            <span>:</span>
+            <span id="mints">00</span>
+        </div>
+        <div id="csaid">
+            <span id="ampm">PM</span>
+            <span id="sacind">00</span>
+        </div>
+    </div>
+    </div>
+    <!-- istart javascript  -->
+    <script>
+        function clock() {
+            var hovers = document.getElementById('hors')
+            var mints = document.getElementById('mints')
+            var sacind = document.getElementById('sacind')
+            var ampm = document.getElementById('ampm')
+
+            let ho = new Date().getHours();
+            let mi = new Date().getMinutes();
+            let sc = new Date().getSeconds();
+
+            let Am = ho <= 12 ? "PM" : "AM";
+
+            if (ho > 12) {
+                ho = ho - 12;
+            }
+
+            ho = (ho < 10) ? "0" + ho : ho;
+            mi = (mi < 10) ? "0" + mi : mi;
+            sc = (sc < 10) ? "0" + sc : sc;
+
+            hovers.innerHTML = ho;
+            mints.innerHTML = mi;
+            sacind.innerHTML = sc;
+            ampm.innerHTML = Am;
+        };
+        setInterval(clock, 1000);
+    </script>
+    <!-- end javaScript  -->
+</body>
+
+</html>
