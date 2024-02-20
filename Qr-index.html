@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px red;
+        }
+
+
+        #qr-cantenor {
+            border-radius: 5px;
+            width: 400px;
+            height: 55vh;
+            padding: 20px;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        #qr-input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 96%;
+            border-radius: 5px;
+            font-size: large;
+        }
+
+        #qr-button {
+            width: 100%;
+            padding: 5px;
+        }
+
+        button {
+            font-size: large;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 15px;
+            background-color: rgb(246, 121, 99);
+        }
+
+        button:hover {
+            box-shadow: 0px 0px 5px black;
+        }
+
+        #qrimg {
+            display: block;
+            margin: 0% auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qr-cantenor">
+        <h2>QR Qode Generator</h2>
+        <input type="text" id="qr-input" placeholder="paste your qode">
+        <button id="qr-button" onclick="foo()">Click hear to Generator QR Code</button>
+        <img src="" alt="" id="qrimg">
+    </div>
+
+    <!-- istart javascript  -->
+    <script>
+        var qrinput = document.getElementById('qr-input')
+        var qrimg = document.getElementById('qrimg')
+
+        function foo() {
+            var inputvalue = qrinput.value
+
+            if (!inputvalue) {
+                alert('pleez inter a value URL');
+                return;
+            } else {
+                qrimg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputvalue}`;
+                arimg.alt = `Qr code for ${inputvalue}`;
+                console.log(qrimg.alt);
+            }
+        }
+
+
+        console.log(qrimg);
+    </script>
+</body>
+
+</html>
