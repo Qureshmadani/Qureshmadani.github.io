@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(241, 239, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #main {
+            width: 50%;
+            background-color: aqua;
+            box-shadow: 0px 0px 10px rgb(103, 101, 101);
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        #usertext {
+            width: 300px;
+            padding: 5px;
+            margin-left: 15%;
+        }
+
+        button {
+            padding: 6px;
+            margin-left: 5px;
+            width: 100px;
+            border: none;
+            background-color: tomato;
+        }
+
+        #btn:hover {
+            box-shadow: 0px 0px 10px black;
+            border-radius: 3px;
+        }
+
+        /* istart java css  */
+        .litext {
+            list-style: none;
+            background-color: rgb(80, 182, 236);
+            font-size: 18px;
+            width: 406px;
+            height: 30px;
+            margin-top: 3px;
+            margin-left: 15%;
+        }
+
+        .edbtn {
+            background-color: rgb(80, 182, 236);
+            padding: 5px 0px;
+            border: none;
+            width: 50px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .edbtn:hover {
+            text-decoration: underline;
+        }
+
+        .delbtn {
+            background-color: rgb(80, 182, 236);
+            border: none;
+            padding: 5px 0px;
+            width: 50px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .delbtn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h2>To Do List</h2>
+        <input type="text" id="usertext" placeholder="Enter value">
+        <button onclick="addtodo()" id="btn">Add Todo</button>
+        <ul id="show"></ul>
+    </div>
+    <!-- istart javascript  -->
+    <script>
+        function addtodo() {
+            var show = document.getElementById('show')
+            var usertext = document.querySelector('#usertext')
+
+            show.innerHTML = `<li id="int">${usertext.value}
+<button onclick= 'editbtn()'>Edit</button>
+<button onclick ='delbtn()'>Delete</button>
+usrtext.value = '';
+</li>`
+
+        }
+        function delbtn() {
+            event.target.parentNode.remove();
+        }
+        function editbtn() {
+            var oldText = event.target.parentNode.firstChild.nodeValue
+            console.log(oldText);
+            var editText = prompt('enter your value update', oldText)
+            event.target.parentNode.firstChild.nodeValue = editText
+        }
+        function addtodo() {
+            var usertext = document.querySelector('#usertext')
+            var li = document.createElement('li')
+            var editbtn = document.createElement('button')
+            var delbtn = document.createElement('button')
+            editbtn.innerText = "Edit"
+            delbtn.innerText = "Delete"
+
+            delbtn.setAttribute('onclick', 'delbtn()')
+            editbtn.setAttribute('onclick', 'editbtn()')
+            li.append(usertext.value)
+            li.appendChild(editbtn)
+            li.appendChild(delbtn)
+            show.prepend(li)
+            usertext.value = '';
+            li.setAttribute('class', 'litext')
+            editbtn.setAttribute('class', 'edbtn')
+            delbtn.setAttribute('class', 'delbtn')
+        }
+        function delbtn() {
+            event.target.parentNode.remove();
+        }
+        function editbtn() {
+            var oldText = event.target.parentNode.firstChild.nodeValue
+            console.log(oldText);
+            var editText = prompt('enter your value update', oldText)
+            event.target.parentNode.firstChild.nodeValue = editText
+        }
+    </script>
+</body>
+
+</html>
