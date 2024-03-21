@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: calibri;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(244, 233, 233);
+}
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: #5fe87d;
+}
+.logo {
+  font-size: 25px;
+  color: black;
+  margin: 0px 60px;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+nav ul {
+  float: right;
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+nav ul li a.actve,
+a:hover {
+  background-color: #10af32;
+  border-radius: 5px;
+}
+/* Responsve navbar istar  */
+#checkbtn {
+  float: right;
+  margin-right: 20px;
+  color: #fff;
+  line-height: 70px;
+  font-size: 30px;
+  display: none;
+}
+#check {
+  display: none;
+}
+#check:checked ~ ul {
+  left: 100%;
+  display: block;
+  transition: 0.5s;
+}
+@media (max-width: 895px) {
+  .logo {
+    margin: 0 15px;
+  }
+  #checkbtn {
+    display: block;
+  }
+  nav ul {
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    position: fixed;
+    margin-left: -100%;
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
+
+/*----cardz css istart---*/
+
+.main-container {
+  display: flex;
+  width: 100%;
+  /* height: 100px; */
+  justify-content: center;
+  /* padding: 10px 10px; */
+  margin: 10px 0px;
+  /* flex-wrap: wrap; */
+  overflow: visible;
+}
+.card {
+  width: 230px;
+  height: 260px;
+  margin-left: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(64, 60, 60, 10);
+}
+.card_image img {
+  width: 100%;
+  height: 140px;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+.card_image {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+h3 {
+  margin: 10px 0px 5px 15px;
+}
+.card p {
+  text-align: center;
+  font-size: 15px;
+}
+.card button {
+  width: 100px;
+  padding: 5px 0px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  margin: 5px 0 0 63px;
+  background-color: rgb(238, 141, 124);
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: rgb(167, 31, 7);
+  transition: 0.5s;
+}
+
+/* responsve css cod istar */
+
+@media (max-width: 1030px) {
+  .main-container {
+    margin: 10px 0px;
+  }
+  .card {
+    overflow: hidden;
+    height: 280px;
+  }
+  .card button {
+    margin: 5px 0 0 50px;
+  }
+}
+
+@media (max-width: 830px) {
+  .main-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    overflow: hidden;
+    width: 320px;
+    height: 320px;
+
+    margin-bottom: 15px;
+  }
+  .card button {
+    margin: 10px 0 0 110px;
+  }
+  .card h3 {
+    font-size: 20px;
+  }
+  .card p {
+    margin: 15px 0;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 80%;
+  }
+  .card h3 {
+    margin-left: 25px;
+    margin-top: 15px;
+    font-size: 22px;
+  }
+  .card button {
+    margin: 10px 0 0 160px;
+    width: 125px;
+    font-size: 18px;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 20px;
+  }
+  .card {
+    width: 100%;
+    height: 330px;
+  }
+  .card h3 {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  .card p {
+    padding: 0 8px;
+  }
+  .card button {
+    margin-left: 125px;
+    height: 40px;
+  }
+}

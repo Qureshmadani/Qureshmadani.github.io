@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up paag project</title>
+    <style>
+        #main {
+            width: 100%;
+            height: 95vb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(#4c87f6dd, rgba(244, 100, 100, 0.813), rgba(44, 42, 42, 0.657));
+
+        }
+
+        input {
+            height: 25px;
+            width: 250px;
+            border: none;
+        }
+
+        button {
+            height: 25px;
+            width: 70px;
+            background: linear-gradient(#406ec4, #3270b6);
+            border-radius: 5px;
+            color: white;
+        }
+
+        button:hover {
+            border-color: blue;
+            box-shadow: 2px 2px 2px blueviolet;
+            color: black;
+        }
+
+        #hading-h2 {
+            text-shadow: 2px 2px 2px red;
+            border: solid rgb(91, 88, 88);
+            width: 35%;
+            padding: 2px;
+            box-shadow: 2px 4px 3px rgb(32, 33, 31);
+        }
+
+        #bsaid {
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="inerdiv">
+            <h2 id="hading-h2">Sign up</h2>
+            <input type="text" id="intext" placeholder="UsrName">
+            <hr>
+            <input type="email" id="email" placeholder="Email">
+            <hr>
+            <input type="password" id="password" placeholder="Password">
+            <hr>
+            <button onclick="foo()">Save</button>
+        </div>
+    </div>
+
+    <!-- javaScript shrow -->
+    <script>
+        var inp = document.getElementById('intext')
+        var emai = document.getElementById('email')
+        var pass = document.getElementById('password')
+
+        function foo() {
+            localStorage.setItem('setText', intext.value)
+            localStorage.setItem('setEmail', email.value)
+            localStorage.setItem('setpassword', password.value)
+            window.location.href = 'loginindex.html'
+        }
+    </script>
+</body>
+
+</html>
